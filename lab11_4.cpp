@@ -4,6 +4,8 @@
 using namespace std;
 
 //Declare prototype of function template mySwap() here
+template <typename T>
+void mySwap(T&,T&);
 
 
 int main(){
@@ -25,7 +27,7 @@ int main(){
 	
 	
 	char p = 'P', q = 'Q';
-	cout << "Before swapping:\n";
+	cout << "Before swapping:\n";	
 	cout << "p = " << p << ", q = " << q << "\n";
 	mySwap(p,q);
 	cout << "After swapping:\n";
@@ -34,6 +36,12 @@ int main(){
 	return 0;
 }
 
-
+template <typename I>
+void mySwap(I &m,I &n){
+	I temp;
+	temp=m;
+	m=n;
+	n=temp;
+}
 //Write definition of function template mySwap() here
 
